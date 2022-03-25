@@ -22,7 +22,7 @@ public class NetflixService {
 
     public String NetflixData() throws FileNotFoundException {
         List<NetflixMap> result = new ArrayList<>();
-        try(Scanner sc = new Scanner(new File("src/main/resources/netflix_titles.csv"))) {
+        try(Scanner sc = new Scanner(new File("src/main/resources/netflix_titles.csv"))) { //parsing data from csv file
             while (sc.hasNext())  //returns a boolean value
             {
                 String data = sc.nextLine();
@@ -31,7 +31,7 @@ public class NetflixService {
                 result.add(map);
             }
         }
-        netflixRepo.saveAll(result);
+        netflixRepo.saveAll(result); //adding data to table
         return SUCCESS_MSG;
     }
 }

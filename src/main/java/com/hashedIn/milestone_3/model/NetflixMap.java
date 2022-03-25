@@ -3,7 +3,7 @@ package com.hashedIn.milestone_3.model;
 import javax.persistence.*;
 
 @Entity
-public class NetflixMap {
+public class NetflixMap { //mapping data for db
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
